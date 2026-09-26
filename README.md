@@ -4,7 +4,7 @@
 
 Drittes Stück der **Lineare-Programmierung-Reihe** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind von [pivotregeln-demo](https://github.com/sebastian-hanisch/pivotregeln-demo). Auf den zufälligen Instanzen der ersten beiden Stücke brauchte der Simplex wenige Pivots (etwa einen halben je Ressource). Geht das immer so? **Klee und Minty (1972)** bauten einen **verformten Würfel** in n Dimensionen, auf dem die Dantzig-Regel von Ecke zu Ecke über **alle 2ⁿ Ecken** läuft. Die Demo verwendet Chvátals Form des Würfels (maximiere Σⱼ 2ⁿ⁻ʲ xⱼ unter 2 · Σ über j < i von 2ⁱ⁻ʲ xⱼ, plus xᵢ, höchstens 5ⁱ) und stellt vier Fragen, alle gemessen: **(1) Der Würfel** – wie sieht der Pfad aus, und stimmen 2ⁿ − 1 Pivots? **(2) Pivots über n** – wie schneiden die anderen Regeln aus Stück 2 auf demselben Würfel ab, verglichen mit dem typischen Fall? **(3) Störung** – wie schnell zerstört Rauschen in den Daten den Würfel, und hängt das davon ab, wie man stört? **(4) Aufwand** – Pivots und Rechenoperationen aller Regeln bei einem n.
 
-**Einordnung in die Reihe:** geplant sind zwölf Stücke, dies ist das dritte (Details in `lp-planung/PLAN.md` des Portfolio-Ordners):
+**Einordnung in die Reihe:** die Reihe hat elf Stücke, dies ist das dritte (Details in `lp-planung/PLAN.md` des Portfolio-Ordners):
 
 ```
 Tableau-Simplex (Wurzel)                                                                  [gebaut: tableau-simplex-demo]
