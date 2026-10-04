@@ -10,10 +10,10 @@ Drittes Stück der **Lineare-Programmierung-Reihe** der "Konzepte"-Reihe für di
 Tableau-Simplex (Wurzel)                                                                  [gebaut: tableau-simplex-demo]
  ├─ Pivotregeln & Entartung                                                               [gebaut: pivotregeln-demo]
  │    └─ Simplex im schlimmsten und im typischen Fall (Klee-Minty)                        [DIESES STÜCK]
- ├─ Revised Simplex ─ Präsolve, Skalierung & Numerik                                     [nicht gebaut]
- ├─ Dualität & Sensitivität ─ Dualer Simplex & Neuoptimierung                            [nicht gebaut]
- ├─ Ellipsoid-Methode (Kontrast: polynomial in der Theorie)                              [nicht gebaut]
- └─ Innere Punkte ─ PDLP (Verfahren erster Ordnung) ─ Crossover & Simplex gegen Innere Punkte gegen PDLP  [nicht gebaut]
+ ├─ Revised Simplex ─ Präsolve, Skalierung & Numerik                                     [gebaut: revised-simplex-demo, praesolve-demo]
+ ├─ Dualität & Sensitivität ─ Dualer Simplex & Neuoptimierung                            [gebaut: lp-dualitaet-demo, dualer-simplex-demo]
+ ├─ Ellipsoid-Methode (Kontrast: polynomial in der Theorie)                              [gebaut: ellipsoid-demo]
+ └─ Innere Punkte ─ PDLP (Verfahren erster Ordnung) ─ Crossover & Simplex gegen Innere Punkte gegen PDLP  [gebaut: innere-punkte-demo, pdlp-demo, crossover-demo]
 ```
 
 Ergebnis in Kürze: **Der Würfel ist ein Würfel für die Dantzig-Regel, nicht für den Simplex.** Dantzig braucht auf Chvátals Würfel genau **2ⁿ − 1 Pivots** (n = 1 bis 14 gemessen: bei n = 14 sind es 16 383 Pivots und 13,8 Millionen Operationen für ein LP mit 14 Bedingungen), der **größte Zuwachs** und **Steepest Edge** brauchen **einen einzigen Pivot** (bei n = 12: 913 und 937 Operationen gegen 2 559 375). **Bland** ist auf dem Würfel weiter exponentiell, aber langsamer: **2 F(n+1) − 1 Pivots** mit den Fibonacci-Zahlen (n = 12: 465, n = 14: 1 219). Die **Zufallsregel** braucht bei n = 12 im Median 19 Pivots (Spanne 1 bis 43 über 30 Seeds). Auf **zufälligen Instanzen** braucht Dantzig im Median nur 1,5 bis 6,5 Pivots (n = 2 bis 14). Ob das **Rauschen** den Würfel zerstört, hängt von der Art ab: **multiplikatives** Rauschen (jede von null verschiedene Zahl mal 1 + σ z; die Nullen bleiben) lässt den Würfelpfad bis σ = 0,01 vollständig unverändert und drückt die Pivots bei n = 12 erst ab σ = 0,03 (3 745), 0,1 (562) und 0,3 (64); **additives** Rauschen (auch auf den Nullen) senkt sie schon bei σ = 10⁻⁶ auf 933,5 und bei 10⁻⁴ auf 116.
@@ -92,4 +92,4 @@ Tests: `pip install -r requirements-dev.txt` und `python -m pytest tests/ -W err
 - Spielman, D. A., & Teng, S.-H. (2004). *Smoothed analysis of algorithms: Why the simplex algorithm usually takes polynomial time.* Journal of the ACM 51(3), 385–463.
 - Bach, E., & Huiberts, S. (2025). *Optimal smoothed analysis of the simplex method.* arXiv:2504.04197 (nur genannt).
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning.
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Lineare Programmierung: vom Tableau zum Crossover](https://sebastianhanisch.net/konzepte-lineare-programmierung.html).

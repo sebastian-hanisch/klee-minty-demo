@@ -64,7 +64,7 @@ in n Dimensionen: die Dantzig-Regel läuft von Ecke zu Ecke über **alle 2ⁿ Ec
 Regeln aus Stück 2 auf demselben Würfel ab, verglichen mit dem typischen Fall? **(3) Störung** - wie schnell zerstört Rauschen in den Daten den Würfel, und hängt das davon ab, wie man stört? **(4) Aufwand** - Pivots und Rechenoperationen aller Regeln bei einem n.
 """
 )
-st.caption("Kind von [Pivotregeln und Entartung](https://github.com/sebastian-hanisch/pivotregeln-demo). Folgestücke (Revised Simplex, Dualität, Innere Punkte, PDLP) sind [noch nicht gebaut].")
+st.caption("Kind von [Pivotregeln und Entartung](https://github.com/sebastian-hanisch/pivotregeln-demo). Folgestücke u. a.: [Revised Simplex](https://github.com/sebastian-hanisch/revised-simplex-demo), [Dualität und Sensitivität](https://github.com/sebastian-hanisch/lp-dualitaet-demo), [Innere Punkte](https://github.com/sebastian-hanisch/innere-punkte-demo), [PDLP](https://github.com/sebastian-hanisch/pdlp-demo).")
 
 with st.expander("So funktioniert der Würfel", expanded=True):
     st.markdown(
@@ -211,7 +211,7 @@ st.markdown(
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Der Standardwürfel ist "der" schlimmste Fall.** | Er ist es nur für die Dantzig-Regel: Größter Zuwachs und Steepest Edge lösen ihn mit 1 Pivot, die Zufallsregel im Median mit 19 (n = 12). Für jede einfache Regel gibt es einen eigenen verformten Würfel (Jeroslow 1973 für den größten Zuwachs, Goldfarb und Sit 1979 für Steepest Edge) - hier nur genannt, nicht gebaut. | Regel-Varianten, Zufallsregeln |
-| **Exponentiell viele Pivots heißt: LP ist schwer.** | Nein: die Schranke gilt für die Regel, nicht für das Problem. Ellipsoid-Methode und Innere Punkte lösen jedes LP in polynomialer Zeit (folgende Stücke der Reihe, noch nicht gebaut). | Ellipsoid, Innere Punkte |
+| **Exponentiell viele Pivots heißt: LP ist schwer.** | Nein: die Schranke gilt für die Regel, nicht für das Problem. Ellipsoid-Methode und Innere Punkte lösen jedes LP in polynomialer Zeit (weitere Stücke der Reihe: ellipsoid-demo und innere-punkte-demo). | Ellipsoid, Innere Punkte |
 | **Ein Würfel taucht in der Praxis auf.** | Er ist konstruiert; schon kleines Rauschen löst ihn auf (Schritt 3). Zufällige Instanzen brauchen im Median 1,5 bis 6,5 Pivots (n = 2 bis 14). Eine echte Praxis-Statistik ist das nicht: die Zufallsinstanzen sind synthetisch. | Geglättete Analyse |
 | **Multiplikativ und additiv sind gleich stark.** | Sie sind es nicht: additives Rauschen ist relativ zum größten Eintrag der Zeile skaliert und trifft auch die Nullen; deshalb wirken gleiche σ-Werte sehr verschieden. Ein Vergleich gilt nur je Störungsart. | Modellwahl der Störung |
 | **Die Form der Formulierung ist gleichgültig.** | Die ε-Form des Originals (x ≥ 0, ε = 1/3) löst Dantzig mit 1 Pivot; erst die Chvátal-Form ist der Würfel für dieses Standardformat. | Umformulierung, Präsolve |
@@ -242,6 +242,6 @@ Implementiert in `kle_algorithm.py` (Simplex mit fünf Regeln, Ecken-Aufzählung
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Lineare Programmierung: vom Tableau zum Crossover](https://sebastianhanisch.net/konzepte-lineare-programmierung.html)."
 )
