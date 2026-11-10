@@ -77,7 +77,7 @@ def perturbed_mult_instance(base, sigma, seed):
 
 def perturbed_add_instance(base, sigma, seed):
     """Im Stil der geglätteten Analyse (Spielman und Teng): zu JEDEM Koeffizienten (auch den Nullen) kommt sigma mal dem größten Betrag seiner Zeile mal z, zu jedem Deckungsbeitrag sigma mal dem größten Deckungsbeitrag
-    mal z; die Bestände werden wie oben multiplikativ gestört (Faktor mindestens 0.1). Die Instanz kann dadurch unbeschränkt werden (die Nullen tragen nicht mehr)."""
+    mal z; die Bestände werden wie oben multiplikativ gestört (Faktor mindestens 0.1). Die Instanz kann dadurch unbeschränkt werden (die Nullen halten nicht mehr)."""
     rng = random.Random(f"kle-perturb-add-{seed}-{base.n}")
     A = []
     for row in base.A:
